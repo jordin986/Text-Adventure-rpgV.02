@@ -31,7 +31,7 @@ public:
 
 */
 
-player()
+player::player()
 {
     cin >> playerName;
     srand(time(NULL));

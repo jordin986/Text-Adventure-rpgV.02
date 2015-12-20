@@ -27,7 +27,7 @@ int main()
     while (test->returnHp() > 0 && play->returnHp() > 0)
     {
         cin >> playermove;
-        if (playermove == attack)
+        if (playermove = "attack")
         {
             int damage = wep->damage();
             int pDamage = play->attack(damage);
@@ -40,7 +40,7 @@ int main()
             cout << "Please attack" << endl;
         }
 
-        monsterTurn();
+        void monsterTurn();
     }
     return 0;
 

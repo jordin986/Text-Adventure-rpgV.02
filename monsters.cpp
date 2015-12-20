@@ -31,7 +31,7 @@ public:
 
 using namespace std;
 
-monster()
+monster::monster()
 {
     monsterName = "Goblin";
     maxHp = 10;
