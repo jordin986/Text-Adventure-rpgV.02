@@ -14,6 +14,7 @@
 using namespace std;
 
 class player{
+
 private:
     string playerName;
     int maxHp;
@@ -22,6 +23,7 @@ private:
     int xp;
     int strength;
     int intelligence;
+
 public:
     player();
     void showStats();
@@ -30,6 +32,9 @@ public:
     void takeDamage(int /*damage taken*/, string /*source*/);
     int returnHp(){return curHp;}
     int attack(int /*weapon dmg*/);
+    player * link;
+    player * firstPtr;
     //~player();
 };
+
 #endif // PLAYER_H

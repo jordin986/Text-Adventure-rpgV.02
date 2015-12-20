@@ -1,7 +1,6 @@
 #ifndef MONSTERS_H
 #define MONSTERS_H
 
-
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -11,8 +10,11 @@
 #include <time.h>
 
 using namespace std;
+
 class monster{
+
 private:
+    int monid;
     string monsterName;
     int maxHp;
     int curHp;
@@ -21,6 +23,7 @@ private:
     int maxDmg;
     int minDmg;
     int defence;
+
 public:
     monster();
     void showStats();
@@ -29,6 +32,9 @@ public:
     void takeDamage(int /*damage taken*/);
     int returnHp(){return curHp;}
     int attack();
+    monster * link;
+    monster * firstPtr;
     //~monsterr();
 };
+
 #endif // MONSTERS_H

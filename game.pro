@@ -24,3 +24,8 @@ HEADERS += \
     monsters.h \
     player.h \
     items.h
+
+OTHER_FILES += \
+    items.jor \
+    save.jor \
+    monsters.jor

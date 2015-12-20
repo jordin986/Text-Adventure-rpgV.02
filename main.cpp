@@ -12,16 +12,19 @@
 
 using namespace std;
 void monsterTurn(monster* , player*);
-
 int main()
 {
     string playermove;
     monster * test = new monster;
     player * play = new player;
     int playhp = play->returnHp();
-    item * wep = new item;
+    itemList * wep = new itemList;
 
     int killctr = 0;
+
+    item *equipped;
+    *equipped = wep->setEquipped();
+
     cout << "You see a " << test->showName() <<"! What do you do?" << endl;
    do{
         cin >> playermove;
@@ -29,7 +32,7 @@ int main()
 
         if (playermove == "attack")
         {
-            int damage = wep->damage();
+            int damage = wep->damage(*equipped);
             int pDamage = play->attack(damage);
             test->takeDamage(pDamage);
 
@@ -50,7 +53,7 @@ int main()
             monsterTurn(test, play);
 
 
-    }   while (playhp >= 0);
+    }   while (playhp >= 0 && playermove != "quit");
 
     cout << "Congrats ! you managed to kill " << killctr << " goblins!!" << endl;
 

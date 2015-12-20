@@ -63,7 +63,7 @@ void player::gainXP(int exp)
 
 void player::takeDamage(int damage, string source)
 {
-    cout << "You have taken " << damage << " damage from a" << source << endl;
+    cout << "You have taken " << damage << " damage from a " << source << endl;
     curHp = curHp - damage;
 
 
