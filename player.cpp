@@ -42,6 +42,7 @@ player::player()
     strength = rand() % 10 + 1;
     intelligence = rand() % 10 + 1;
     maxHp = rand() % 10 + 1 + strength;
+    curHp = maxHp;
 }
 
 void player::showStats()
@@ -62,7 +63,7 @@ void player::gainXP(int exp)
 
 void player::takeDamage(int damage, string source)
 {
-    cout << "You have taken " << damage << " damage from a" << source;
+    cout << "You have taken " << damage << " damage from a" << source << endl;
     curHp = curHp - damage;
 
 
@@ -71,7 +72,6 @@ void player::takeDamage(int damage, string source)
 int player::attack(int damage)
 {
     damage += strength;
-
     return damage;
 
 }

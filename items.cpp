@@ -25,7 +25,7 @@ using namespace std;
 item::item()
 {
     itemName = "Blade of testing";
-    maxDamage = 10;
+    maxDamage = 6;
     minDamage = 1;
 
 

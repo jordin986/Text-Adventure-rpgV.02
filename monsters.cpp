@@ -34,11 +34,11 @@ using namespace std;
 monster::monster()
 {
     monsterName = "Goblin";
-    maxHp = 100;
+    maxHp = 15;
     level = 1;
     xp = 200;
-    maxDmg = 5;
-    minDmg = 0;
+    maxDmg = 7;
+    minDmg = 1;
     defence = 2;
     curHp = maxHp;
 
@@ -53,8 +53,9 @@ void monster::showStats()
 void monster::takeDamage(int damage)
 {
     damage = damage - defence;
-    curHp = damage;
-    cout << "monster has taken " << damage << " damage" << endl;
+    curHp = curHp - damage;
+    cout << "You have dealt " << damage << " damage!!" << endl;
+    cout << "monster has " << curHp << " health!" << endl;
 
 
 }
@@ -63,7 +64,9 @@ int monster::attack()
     cout << "The " << monsterName << " attacks!" << endl;
 
     srand(time(NULL));
-    int damage;
+
+    int damage = 0;
+
     while (damage < minDmg)
         damage = rand() % maxDmg + 1;
     return damage;
