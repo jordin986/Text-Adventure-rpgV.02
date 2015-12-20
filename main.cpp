@@ -11,23 +11,22 @@
 #include <time.h>
 
 using namespace std;
-void monstersTurn();
-
+void monsterTurn(monster* , player*);
+string playermove;
+monster * test = new monster;
+player * play = new player;
+int playhp = play->returnHp();
+item * wep = new item;
 int main()
 {
 
-    string playermove;
-    monster * test = new monster;
-    test->monster();
-    player * play = new player;
-    play->player();
-    item * wep = new item;
-    wep->item();
+
     cout << "You see a " << test->showName() <<"! What do you do?" << endl;
-    while (test->returnHp() > 0 && play->returnHp() > 0)
-    {
+   do{
         cin >> playermove;
-        if (playermove = "attack")
+        playhp = play->returnHp();
+
+        if (playermove == "attack")
         {
             int damage = wep->damage();
             int pDamage = play->attack(damage);
@@ -40,16 +39,20 @@ int main()
             cout << "Please attack" << endl;
         }
 
-        void monsterTurn();
-    }
+        monsterTurn(test, play);
+
+    }   while (playhp!=0);
+
+
     return 0;
 
 }
 
 
-void monstersTurn()
+void monsterTurn(monster* test, player* play)
 {
+
     int dmg = test->attack();
-    int source = test->showName;
+    string source = test->showName();
     play->takeDamage(dmg, source);
 }

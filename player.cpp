@@ -33,13 +33,15 @@ public:
 
 player::player()
 {
+    cout<< "please enter character name: ";
     cin >> playerName;
+    cout << endl;
     srand(time(NULL));
     level = 1;
     xp = 0;
     strength = rand() % 10 + 1;
     intelligence = rand() % 10 + 1;
-    maxHp = rand() % 10 + 1 + strength
+    maxHp = rand() % 10 + 1 + strength;
 }
 
 void player::showStats()

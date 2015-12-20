@@ -35,7 +35,7 @@ int item::damage()
 {
     srand(time(NULL));
     int damage = 0;
-    while (damage < item.minDamage)
+    while (damage < minDamage)
         damage = rand() % maxDamage + 1;
     return damage;
 }

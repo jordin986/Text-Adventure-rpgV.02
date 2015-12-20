@@ -34,7 +34,7 @@ using namespace std;
 monster::monster()
 {
     monsterName = "Goblin";
-    maxHp = 10;
+    maxHp = 100;
     level = 1;
     xp = 200;
     maxDmg = 5;
@@ -54,7 +54,7 @@ void monster::takeDamage(int damage)
 {
     damage = damage - defence;
     curHp = damage;
-    cout << "monster has take " << damage << " damage" << endl;
+    cout << "monster has taken " << damage << " damage" << endl;
 
 
 }
@@ -63,9 +63,9 @@ int monster::attack()
     cout << "The " << monsterName << " attacks!" << endl;
 
     srand(time(NULL));
-    int damage = 0;
-    while (damage < minDamage)
-        damage = rand() % maxDamage + 1;
+    int damage;
+    while (damage < minDmg)
+        damage = rand() % maxDmg + 1;
     return damage;
 }
 
