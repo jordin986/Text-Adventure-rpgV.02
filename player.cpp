@@ -8,6 +8,7 @@
 #include <time.h>
 
 
+using namespace std;
 /*
 class player{
 private:

@@ -10,9 +10,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-
-void monstersTurn();
 using namespace std;
+void monstersTurn();
+
 int main()
 {
 
@@ -42,7 +42,7 @@ int main()
 
         monsterTurn();
     }
-    return 1;
+    return 0;
 
 }
 

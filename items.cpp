@@ -21,6 +21,7 @@ public:
 };
  */
 
+using namespace std;
 item::item()
 {
     itemName = "Blade of testing";
