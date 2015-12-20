@@ -17,17 +17,17 @@ int main()
 {
 
     string playermove;
-    monster test;
-    test.monster();
-    player play;
-    play.player();
-    weapon wep;
-    wep.weapon();
+    monster * test = new monster;
+    test->monster();
+    player * play = new player;
+    play->player();
+    item * wep = new item;
+    wep->item();
     cout << "You see a " << test->showName() <<"! What do you do?" << endl;
     while (test->returnHp() > 0 && play->returnHp() > 0)
     {
-        cin >> playerMove;
-        if (playerMove == attack)
+        cin >> playermove;
+        if (playermove == attack)
         {
             int damage = wep->damage();
             int pDamage = play->attack(damage);

@@ -49,7 +49,7 @@ void monster::showStats()
 
 }
 
-void monster::takeDamage(damage)
+void monster::takeDamage(int damage)
 {
     damage = damage - defence;
     curHp = damage;

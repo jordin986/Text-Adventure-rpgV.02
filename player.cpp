@@ -52,12 +52,12 @@ void player::showStats()
     cout << "Intelligence: " << intelligence << endl;
 }
 
-void player::gainXP(exp)
+void player::gainXP(int exp)
 {
     xp += exp;
 }
 
-void player::takeDamage(damage, source)
+void player::takeDamage(int damage, string source)
 {
     cout << "You have taken " << damage << " damage from a" << source;
     curHp = curHp - damage;
@@ -65,7 +65,7 @@ void player::takeDamage(damage, source)
 
 }
 
-int player::attack(damage)
+int player::attack(int damage)
 {
     damage += strength;
 
